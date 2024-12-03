@@ -15,8 +15,8 @@ def run(playwright: Playwright) -> None:
     page.get_by_role("link", name="Completed").click()  # эмулирует клик левой кнопкой мышки по веб-элементу
 
     # ---------------------
-    context.close()
-    browser.close()
+    # context.close()
+    # browser.close()
 
 
 with sync_playwright() as playwright:

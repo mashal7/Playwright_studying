@@ -15,6 +15,6 @@ def test_add_todo(playwright: Playwright) -> None:
     page.get_by_role("link", name="Completed").click()  # эмулирует клик левой кнопкой мышки по веб-элементу
 
     # ---------------------
-    context.close()
-    browser.close()
+    # context.close()
+    # browser.close()
 
