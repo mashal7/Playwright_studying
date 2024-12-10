@@ -7,8 +7,12 @@ from pyexpat.errors import messages
 def test_locators(page) -> None:
 
     # перехватывать сетевой трафик
+    # выводит метод и URL каждого исходящего запроса
     page.on("request", lambda request: print(">>", request.method, request.url))
+    # выводит статус ответа и его URL
     page.on("response", lambda response: print("<<", response.status, response.url))
+    # после запуска теста в консоли будут выведены все запросы и ответы
+
 
     page.goto("https://demo.playwright.dev/todomvc/#/")
 
